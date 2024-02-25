@@ -20,10 +20,9 @@ folder="yi"
 
 # select tasks
 tasks_selected=(
-    "eustrivia"
-    "eustrivia_mt"
-    "eustrivia_mt_itzuli"
-    "eustrivia_mt_elhuyar"
+    "basquetrivia_eu"
+    "basquetrivia_en"
+    "basquetrivia_en_mt"
 )
 
 num_fewshot=5
