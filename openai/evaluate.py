@@ -19,27 +19,26 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 answer2letter = {0: "A", 1: "B", 2: "C"}
 
 
-def load_eustrivia(split="test"):
-    # Load your dataset from Hugging Face
-    dataset = load_dataset("HiTZ/eustrivia", split=split)
+def load_basquetrivia(config="eu"):
+    dataset = load_dataset("HiTZ/basquetrivia", name=config, split="test")
     return dataset
 
 
-def format_question(item, lang="eu"):
+def format_question(item, config="eu"):
     question = item["question"]
     candidates = item["candidates"]
 
     # Format the question with the given prompt
-    if lang == "eu":
+    if config == "eu":
         formatted_question = f"Galdera: {question}\nA: {candidates[0]}\nB: {candidates[1]}\nC: {candidates[2]}\nErantzuna:"
-    elif lang == "en":
+    elif config in ["en", "en_mt"]:
         formatted_question = f"Question: {question}\nA: {candidates[0]}\nB: {candidates[1]}\nC: {candidates[2]}\nAnswer:"
     else:
-        raise ValueError("lang must be 'eu' or 'en'")
+        raise ValueError("config must be 'eu', 'en' or 'en_mt'")
     return formatted_question
 
 
-def few_shot_messages(few_shot_examples, lang="eu"):
+def few_shot_messages(few_shot_examples, config="eu"):
     # Add the few-shot examples to the prompt
     messages = [
         {
@@ -48,14 +47,14 @@ def few_shot_messages(few_shot_examples, lang="eu"):
         }
     ]
     for example in few_shot_examples:
-        messages.append({"role": "user", "content": format_question(example, lang)})
+        messages.append({"role": "user", "content": format_question(example, config)})
         messages.append(
             {"role": "assistant", "content": answer2letter[example["answer"]]}
         )
     return messages
 
 
-def few_shot_messages_system(few_shot_examples, lang="eu"):
+def few_shot_messages_system(few_shot_examples, config="eu"):
     # Add the few-shot examples to the prompt using system messages
     messages = [
         {
@@ -68,7 +67,7 @@ def few_shot_messages_system(few_shot_examples, lang="eu"):
             {
                 "role": "system",
                 "name": "example_user",
-                "content": format_question(example, lang),
+                "content": format_question(example, config),
             }
         )
         messages.append(
@@ -86,27 +85,60 @@ def completion_with_backoff(**kwargs):
     return client.chat.completions.create(**kwargs)
 
 
-def evaluate_eustrivia(split="test", model="gpt-3.5-turbo", shots=5, limit=1):
+def openai_api_calculate_cost(usage, model="gpt-4-0125-preview"):
+    pricing = {
+        'gpt-3.5-turbo-0125': {
+            'prompt': 0.0005,
+            'completion': 0.0015,
+        },
+        'gpt-4-0125-preview': {
+            'prompt': 0.01,
+            'completion': 0.03,
+        },
+        'gpt-4-0613': {
+            'prompt': 0.03,
+            'completion': 0.06,
+        }
+    }
+
+    try:
+        model_pricing = pricing[model]
+    except KeyError:
+        raise ValueError("Invalid model specified")
+
+    prompt_cost = usage.prompt_tokens * model_pricing['prompt'] / 1000
+    completion_cost = usage.completion_tokens * model_pricing['completion'] / 1000
+
+    total_cost = prompt_cost + completion_cost
+    # round to 6 decimals
+    total_cost = round(total_cost, 6)
+
+    return total_cost
+
+
+def evaluate_basquetrivia(config="test", model="gpt-3.5-turbo", shots=5, limit=1, start=0):
     # Load your dataset from Hugging Face
-    print(f"Loading {split} split...")
-    dataset = load_eustrivia(split=split)
+    print(f"Loading {config} config...")
+    dataset = load_basquetrivia(config=config)
 
     # Create the results directory if it doesn't exist
     os.makedirs(f"../results/{model}", exist_ok=True)
 
-    lang = "eu" if split == "test" else "en"
+    tokens = 0
+    cost = 0 
 
     # Iterate over your dataset and use the API
     for i, item in enumerate(dataset):
-        print(f"Processing example {i}...")
+        if i < start:
+            continue
 
         # Get 5 random few-shot examples
         few_shot_examples = random.sample([ex for ex in dataset if ex != item], shots)
 
         # Add the few-shot examples to the prompt
-        messages = few_shot_messages(few_shot_examples, lang)
+        messages = few_shot_messages(few_shot_examples, config)
 
-        messages.append({"role": "user", "content": format_question(item, lang)})
+        messages.append({"role": "user", "content": format_question(item, config)})
 
         # Save messages along with the original dataset fields to a jsonl file
         item["messages"] = messages
@@ -130,8 +162,17 @@ def evaluate_eustrivia(split="test", model="gpt-3.5-turbo", shots=5, limit=1):
             response["choices"][0]["message"]["content"]
             == answer2letter[item["answer"]]
         )
+        
+                # Calculate OpenAI API cost and add to the item
+        item["cost"] = openai_api_calculate_cost(completion.usage, model)
+        
+        cost += item["cost"]
+        tokens += completion.usage.total_tokens
+        
+        # Print details in a line: i, total tokens and total cost
+        print(f"{i + 1}: ${cost:.4f} total cost, {tokens:,} tokens")
 
-        with open(f"../results/{model}/eustrivia_{split}_{shots}-shot.jsonl", "a") as f:
+        with open(f"../results/{model}/basquetrivia_{config}_{shots}-shot.jsonl", "a") as f:
             json.dump(item, f)
             f.write("\n")
 
@@ -143,7 +184,7 @@ def main():
     # Define the arguments
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--split", type=str, default="test", help="Dataset split to evaluate on"
+        "--config", type=str, default="eu", help="Dataset config to evaluate on"
     )
     parser.add_argument(
         "--model", type=str, default="gpt-3.5-turbo", help="OpenAI model to use"
@@ -154,9 +195,12 @@ def main():
     parser.add_argument(
         "--limit", type=int, default=1, help="Number of examples to evaluate"
     )
+    parser.add_argument(
+        "--start", type=int, default=0, help="Start index of the examples to evaluate"
+    )
     args = parser.parse_args()
-    evaluate_eustrivia(
-        split=args.split, model=args.model, shots=args.shots, limit=args.limit
+    evaluate_basquetrivia(
+        config=args.config, model=args.model, shots=args.shots, limit=args.limit
     )
 
 
