@@ -21,7 +21,7 @@ folder="llama-2"
 tasks_selected=(
     "basquetrivia_eu"
     "basquetrivia_en"
-    "basquetrivia_en_mt"
+    #"basquetrivia_en_mt"
 )
 
 num_fewshot=5

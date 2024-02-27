@@ -21,7 +21,7 @@ folder="latxa"
 tasks_selected=(
     "basquetrivia_eu"
     "basquetrivia_en"
-    "basquetrivia_en_mt"
+    #"basquetrivia_en_mt"
 )
 
 

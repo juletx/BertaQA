@@ -1,2 +1,4 @@
 .slurm/
 __pycache__/
+datasets
+pretrained__*.jsonl

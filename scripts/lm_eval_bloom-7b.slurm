@@ -16,13 +16,13 @@ source /gaueko0/users/jetxaniz007/phd/venv2/bin/activate
 path="bigscience"
 model="bloom-7b1"
 model_name=$path/$model
-folder="latxa"
+folder="bloom"
 
 # select tasks
 tasks_selected=(
-    "basquetrivia_eu"
+    #"basquetrivia_eu"
     "basquetrivia_en"
-    "basquetrivia_en_mt"
+    #"basquetrivia_en_mt"
 )
 
 num_fewshot=5

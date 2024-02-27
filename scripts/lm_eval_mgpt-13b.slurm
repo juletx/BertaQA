@@ -22,7 +22,7 @@ folder="mgpt"
 tasks_selected=(
     "basquetrivia_eu"
     "basquetrivia_en"
-    "basquetrivia_en_mt"
+    #"basquetrivia_en_mt"
 )
 
 num_fewshot=5
@@ -30,10 +30,10 @@ num_fewshot=5
 for group_name in "${tasks_selected[@]}"; do
     srun python3 -m lm_eval \
         --model hf \
-        --model_args pretrained=$model_name \
+        --model_args pretrained=$model_name,dtype=float16 \
         --tasks $group_name \
         --device cuda \
-        --output_path ../results/${folder}/${model}/${model}_${group_name}_${num_fewshot}-shot.json \
+        --output_path ../results/${folder}/${model}/${group_name}_${num_fewshot}-shot.json \
         --batch_size auto \
         --num_fewshot ${num_fewshot} \
         --log_samples

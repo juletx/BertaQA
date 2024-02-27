@@ -11,8 +11,9 @@
 
 # activate virtual environment
 source /gaueko0/users/jetxaniz007/phd/venv2/bin/activate
-export TRANSFORMERS_CACHE="/gaueko0/transformers_cache/"
-export TOKENIZERS_PARALLELISM=false
+
+# print transformers cache
+echo $TRANSFORMERS_CACHE
 
 path="facebook"
 model="xglm-7.5B"
@@ -22,8 +23,9 @@ folder="xglm"
 
 # select tasks
 tasks_selected=(
-    "eustrivia"
-    "eustrivia_mt"
+    "basquetrivia_eu"
+    "basquetrivia_en"
+    #"basquetrivia_en_mt"
 )
 
 num_fewshot=5
