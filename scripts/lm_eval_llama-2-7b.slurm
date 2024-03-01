@@ -19,9 +19,11 @@ folder="llama-2"
 
 # select tasks
 tasks_selected=(
-    "basquetrivia_eu"
-    "basquetrivia_en"
-    #"basquetrivia_en_mt"
+    #"basquetrivia_eu"
+    #"basquetrivia_en"
+    "basquetrivia_en_mt_nllb"
+    "basquetrivia_en_mt_madlad"
+    "basquetrivia_en_mt_hitz"
 )
 
 num_fewshot=5
