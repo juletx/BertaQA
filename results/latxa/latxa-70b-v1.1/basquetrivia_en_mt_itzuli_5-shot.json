@@ -1,0 +1,63 @@
+{
+  "results": {
+    "basquetrivia_en_mt_itzuli": {
+      "acc,none": 0.6261564339781329,
+      "acc_stderr,none": 0.007016347955015561,
+      "alias": "basquetrivia_en_mt_itzuli"
+    }
+  },
+  "configs": {
+    "basquetrivia_en_mt_itzuli": {
+      "task": "basquetrivia_en_mt_itzuli",
+      "group": "basquetrivia",
+      "dataset_path": "HiTZ/BasqueTrivia",
+      "dataset_name": "en_mt_itzuli",
+      "test_split": "test",
+      "fewshot_split": "test",
+      "doc_to_text": "Question: {{question}}\nA: {{candidates[0]}}\nB: {{candidates[1]}}\nC: {{candidates[2]}}\nAnswer:",
+      "doc_to_target": "answer",
+      "doc_to_choice": [
+        "A",
+        "B",
+        "C"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 5,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 0.0
+      }
+    }
+  },
+  "versions": {
+    "basquetrivia_en_mt_itzuli": "Yaml"
+  },
+  "n-shot": {
+    "basquetrivia_en_mt_itzuli": 5
+  },
+  "config": {
+    "model": "hf",
+    "model_args": "pretrained=HiTZ/latxa-70b-v1.1,parallelize=True",
+    "batch_size": "auto",
+    "batch_sizes": [
+      64
+    ],
+    "device": "cuda",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null
+  },
+  "git_hash": "f05254b"
+}

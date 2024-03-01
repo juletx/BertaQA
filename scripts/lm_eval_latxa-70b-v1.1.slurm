@@ -22,9 +22,10 @@ folder="latxa"
 tasks_selected=(
     #"basquetrivia_eu"
     #"basquetrivia_en"
-    "basquetrivia_en_mt_nllb"
-    "basquetrivia_en_mt_madlad"
-    "basquetrivia_en_mt_hitz"
+    #"basquetrivia_en_mt_nllb"
+    #"basquetrivia_en_mt_madlad"
+    #"basquetrivia_en_mt_hitz"
+    "basquetrivia_en_mt_itzuli"
 )
 
 num_fewshot=5
