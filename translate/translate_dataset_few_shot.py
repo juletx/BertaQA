@@ -228,6 +228,19 @@ def translate_texts(
         save_file(translations[config], config, translate_args, dataset_args)
 
 
+def load_jsonl(input_path):
+    data = []
+    with open(input_path, 'r') as f:
+        for line in f:
+            data.append(json.loads(line.strip()))
+    return data
+
+def save_jsonl(data, output_path):
+    with open(output_path, 'w') as f:
+        for item in data:
+            f.write(json.dumps(item))
+            f.write('\n')
+
 def save_file(
     translations: Dict[str, List[str]],
     config: str,
@@ -247,8 +260,6 @@ def save_file(
     - None
     """
     name = translate_args["model_name"].split("/")[-1]
-    if "LLaMA" in translate_args["model_name"]:
-        name = f"llama-{name}"
     dirname = f"{dataset_args['file_path']}/{name}"
     # create directory if it does not exist
     if not os.path.exists(dirname):
@@ -259,6 +270,9 @@ def save_file(
         translated_df.to_csv(filename, sep="\t", index=False)
     elif filename.endswith(".jsonl"):
         translated_df.to_json(filename, orient="records", lines=True)
+        # load and save as jsonl to fix spacing
+        data = load_jsonl(filename)
+        save_jsonl(data, filename)
     else:
         raise ValueError("Unknown file format")
 
