@@ -24,7 +24,8 @@ tasks_selected=(
     #"basquetrivia_en_mt_nllb"
     #"basquetrivia_en_mt_madlad"
     #"basquetrivia_en_mt_hitz"
-    "basquetrivia_en_mt_itzuli"
+    #"basquetrivia_en_mt_itzuli"
+    "basquetrivia_en_mt_latxa-7b-v1.1"
 )
 
 
