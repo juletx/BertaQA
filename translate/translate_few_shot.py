@@ -82,11 +82,7 @@ def main(
     if not return_output:
         os.makedirs(os.path.abspath(os.path.dirname(output_path)), exist_ok=True)
 
-    accelerator = Accelerator(
-        mixed_precision=precision if precision != "32" else "no",
-        split_batches=False,
-        dispatch_batches=False,
-    )
+    accelerator = Accelerator()
 
     print(f"Loading tokenizer {model_name}...")
     tokenizer = AutoTokenizer.from_pretrained(
@@ -103,13 +99,14 @@ def main(
 
     print(f"Loading model {model_name}...")
     model = AutoModelForCausalLM.from_pretrained(
-        pretrained_model_name_or_path=model_name, cache_dir=cache_dir, device_map="auto" if "70b" in model_name else None
+        pretrained_model_name_or_path=model_name, cache_dir=cache_dir, torch_dtype=torch.bfloat16, device_map="auto" if "70b" in model_name else None, attn_implementation="flash_attention_2", 
     )
 
     model.eval()
 
     print(f"Preparing data...\n")
-
+    
+    """
     if precision == "32":
         model = model.float()
     elif precision == "fp16":
@@ -118,6 +115,7 @@ def main(
         model = model.bfloat16()
     else:
         raise ValueError("Precision not supported. Supported values: 32, fp16, bf16")
+    """
 
     gen_kwargs = {
         # "max_length": max_length,
@@ -200,7 +198,7 @@ def main(
 
                     batch = {k: v for k, v in batch.items() if k != "token_type_ids"}
 
-                    generated_tokens = accelerator.unwrap_model(model).generate(**batch, **gen_kwargs)
+                    generated_tokens = model.generate(**batch, **gen_kwargs)
 
                     generated_tokens = accelerator.pad_across_processes(
                         generated_tokens, dim=1, pad_index=tokenizer.pad_token_id
