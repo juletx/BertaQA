@@ -24,7 +24,8 @@ tasks_selected=(
     #"basquetrivia_en_mt_nllb"
     #"basquetrivia_en_mt_madlad"
     #"basquetrivia_en_mt_hitz"
-    "basquetrivia_en_mt_itzuli"
+    #"basquetrivia_en_mt_itzuli"
+    "basquetrivia_en_mt_llama-2-70b"
 )
 
 num_fewshot=5
@@ -32,7 +33,7 @@ num_fewshot=5
 for group_name in "${tasks_selected[@]}"; do
     srun python3 -m lm_eval \
         --model hf \
-        --model_args pretrained=$model_name,parallelize=True \
+        --model_args pretrained=$model_name,parallelize=True,attn_implementation=flash_attention_2 \
         --tasks $group_name \
         --device cuda \
         --output_path ../results/${folder}/${model}/${group_name}_${num_fewshot}-shot.json \
