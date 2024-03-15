@@ -64,6 +64,10 @@ def anthropic_api_calculate_cost(usage, model="claude-3-sonnet-20240229"):
             "prompt": 0.003,
             "completion": 0.015,
         },
+        "claude-3-haiku-20240307": {
+            "prompt": 0.00025,
+            "completion": 0.00125,
+        }
     }
 
     try:
@@ -173,7 +177,7 @@ def main():
     )
     args = parser.parse_args()
     evaluate_basquetrivia(
-        config=args.config, model=args.model, shots=args.shots, limit=args.limit
+        config=args.config, model=args.model, shots=args.shots, limit=args.limit, start=args.start
     )
 
 
