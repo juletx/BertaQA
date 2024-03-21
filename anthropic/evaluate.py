@@ -117,26 +117,31 @@ def evaluate_basquetrivia(
         item["system"] = system_prompt
         item["messages"] = messages
 
-        # Use the chat models, which are better for multi-turn conversation
-        completion = completion_with_backoff(
-            model=model,
-            max_tokens=1,
-            system=system_prompt,
-            messages=messages,
-            temperature=0,
-        )
+        while True:
+            try:
+                completion = completion_with_backoff(
+                    model=model,
+                    max_tokens=1,
+                    system=system_prompt,
+                    messages=messages,
+                    temperature=0,
+                )
 
-        # convert completions to dict
-        response = completion.model_dump()
+                # convert completions to dict
+                response = completion.model_dump()
 
-        # Save whole response along with the original dataset fields to a jsonl file
-        item["response"] = response
+                # Save whole response along with the original dataset fields to a jsonl file
+                item["response"] = response
 
-        # Check if the answer is correct
-        item["correct"] = (
-            response["content"][0]["text"]
-            == answer2letter[item["answer"]]
-        )
+                # Check if the answer is correct
+                item["correct"] = (
+                    response["content"][0]["text"]
+                    == answer2letter[item["answer"]]
+                )
+                break  # if no error, break the loop
+            except IndexError:
+                print(f"IndexError: {response}")
+                # if error, continue the loop
 
         # Calculate Anthropic API cost and add to the item
         item["cost"] = anthropic_api_calculate_cost(completion.usage, model)
