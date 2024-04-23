@@ -4,8 +4,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=0
-#SBATCH --mem=50GB
-#SBATCH --gres=gpu:0
+#SBATCH --mem=100GB
+#SBATCH --gres=gpu:3
 #SBATCH --output=.slurm/lm_eval_llama-3-70b.out
 #SBATCH --error=.slurm/lm_eval_llama-3-70b.err
 
@@ -20,7 +20,7 @@ folder="llama-3"
 # select tasks
 tasks_selected=(
     "basquetrivia_eu"
-    "basquetrivia_en"
+    #"basquetrivia_en"
 )
 
 num_fewshot=5
