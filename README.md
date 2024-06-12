@@ -3,7 +3,8 @@
 Large Language Models (LLMs) exhibit extensive knowledge about the world, but most evaluations have been limited to global or anglocentric subjects. This raises the question of how well these models perform on topics relevant to other cultures, whose presence on the web is not that prominent. To address this gap, we introduce BertaQA, a multiple-choice trivia dataset that is parallel in English and Basque. The dataset consists of a local subset with questions pertinent to the Basque culture, and a global subset with questions of broader interest. We find that state-of-the-art LLMs struggle with local cultural knowledge, even as they excel on global topics. However, we show that continued pre-training in Basque significantly improves the models' performance on Basque culture, even when queried in English. To our knowledge, this is the first solid evidence of knowledge transfer from a low-resource to a high-resource language. Our analysis sheds light on the complex interplay between language and knowledge, and reveals that some prior findings do not fully hold when reassessed on local topics. Our dataset and evaluation code are available under open licenses at https://github.com/juletx/BertaQA.
 
 Dataset: https://huggingface.co/HiTZ/BertaQA
-Paper: coming soon
+
+Paper: https://arxiv.org/abs/2406.07302
 
 # Get Examples and Statistics
 
@@ -80,4 +81,17 @@ For example, to self-translate the EusTrivia dataset using Latxa v1.1 7b, run:
 
 ```bash
 sbatch self_translate_basquetrivia_latxa-7b-v1.1.slurm
+```
+
+# Citation
+
+```bibtex
+@misc{etxaniz2024bertaqa,
+      title={BertaQA: How Much Do Language Models Know About Local Culture?}, 
+      author={Julen Etxaniz and Gorka Azkune and Aitor Soroa and Oier Lopez de Lacalle and Mikel Artetxe},
+      year={2024},
+      eprint={2406.07302},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
