@@ -274,8 +274,8 @@ dataset_configs = {
             "default": "Euskara",
         },
     },
-    "basquetrivia": {
-        "dataset": "HiTZ/BasqueTrivia",
+    "bertaqa": {
+        "dataset": "HiTZ/BertaQA",
         "dataset_configs": ["eu"],
         "dataset_split": "test",
         "dataset_fields": [

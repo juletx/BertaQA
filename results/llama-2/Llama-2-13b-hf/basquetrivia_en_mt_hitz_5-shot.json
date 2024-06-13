@@ -1,16 +1,16 @@
 {
   "results": {
-    "basquetrivia_en_mt_hitz": {
+    "bertaqa_en_mt_hitz": {
       "acc,none": 0.5258620689655172,
       "acc_stderr,none": 0.007241241177702336,
-      "alias": "basquetrivia_en_mt_hitz"
+      "alias": "bertaqa_en_mt_hitz"
     }
   },
   "configs": {
-    "basquetrivia_en_mt_hitz": {
-      "task": "basquetrivia_en_mt_hitz",
-      "group": "basquetrivia",
-      "dataset_path": "HiTZ/BasqueTrivia",
+    "bertaqa_en_mt_hitz": {
+      "task": "bertaqa_en_mt_hitz",
+      "group": "bertaqa",
+      "dataset_path": "HiTZ/BertaQA",
       "dataset_name": "en_mt_hitz",
       "test_split": "test",
       "fewshot_split": "test",
@@ -41,10 +41,10 @@
     }
   },
   "versions": {
-    "basquetrivia_en_mt_hitz": "Yaml"
+    "bertaqa_en_mt_hitz": "Yaml"
   },
   "n-shot": {
-    "basquetrivia_en_mt_hitz": 5
+    "bertaqa_en_mt_hitz": 5
   },
   "config": {
     "model": "hf",

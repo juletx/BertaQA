@@ -1,18 +1,18 @@
 #!/bin/bash
-#SBATCH --job-name=translate_basquetrivia_latxa-13b-v1
+#SBATCH --job-name=translate_bertaqa_latxa-13b-v1
 #SBATCH --cpus-per-task=8
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:1
-#SBATCH --output=.slurm/translate_basquetrivia_latxa-13b-v1.out
-#SBATCH --error=.slurm/translate_basquetrivia_latxa-13b-v1.err
+#SBATCH --output=.slurm/translate_bertaqa_latxa-13b-v1.out
+#SBATCH --error=.slurm/translate_bertaqa_latxa-13b-v1.err
 #SBATCH --mem=64GB
 
 # activate virtual environment
 source /gaueko0/users/jetxaniz007/phd/venv2/bin/activate
 
 model_name="HiTZ/latxa-13b-v1"
-dataset=basquetrivia
+dataset=bertaqa
 max_new_tokens=64
 
 srun accelerate launch --mixed_precision fp16 --main_process_port 29501 translate_dataset_few_shot.py \

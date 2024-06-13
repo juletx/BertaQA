@@ -19,8 +19,8 @@ client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 answer2letter = {0: "A", 1: "B", 2: "C"}
 
 
-def load_basquetrivia(config="eu"):
-    dataset = load_dataset("HiTZ/basquetrivia", name=config, split="test")
+def load_bertaqa(config="eu"):
+    dataset = load_dataset("HiTZ/bertaqa", name=config, split="test")
     return dataset
 
 
@@ -85,12 +85,12 @@ def anthropic_api_calculate_cost(usage, model="claude-3-sonnet-20240229"):
     return total_cost
 
 
-def evaluate_basquetrivia(
+def evaluate_bertaqa(
     config="test", model="claude-3-sonnet-20240229", shots=5, limit=1, start=0
 ):
     # Load your dataset from Hugging Face
     print(f"Loading {config} config...")
-    dataset = load_basquetrivia(config=config)
+    dataset = load_bertaqa(config=config)
 
     # Create the results directory if it doesn't exist
     os.makedirs(f"../results/{model}", exist_ok=True)
@@ -153,7 +153,7 @@ def evaluate_basquetrivia(
         print(f"{i + 1}: ${cost:.4f} total cost, {tokens:,} tokens")
 
         with open(
-            f"../results/{model}/basquetrivia_{config}_{shots}-shot.jsonl", "a"
+            f"../results/{model}/bertaqa_{config}_{shots}-shot.jsonl", "a"
         ) as f:
             json.dump(item, f)
             f.write("\n")
@@ -181,7 +181,7 @@ def main():
         "--start", type=int, default=0, help="Start index of the examples to evaluate"
     )
     args = parser.parse_args()
-    evaluate_basquetrivia(
+    evaluate_bertaqa(
         config=args.config, model=args.model, shots=args.shots, limit=args.limit, start=args.start
     )
 

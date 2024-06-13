@@ -36,7 +36,7 @@ Evaluation results are in the `results` directory. Each model has a directory wi
 
 ## Results Analysis
 
-To analyze the results, run the `basquetrivia.ipynb` jupyter notebook in the `analysis` directory. This notebook will generate the tables of the paper.
+To analyze the results, run the `bertaqa.ipynb` jupyter notebook in the `analysis` directory. This notebook will generate the tables of the paper.
 
 # Commercial Model Evaluation
 
@@ -56,7 +56,7 @@ Evaluation results are in the `results` directory. Each model has a directory wi
 
 ## Results Analysis
 
-To analyze the results, run the `basquetrivia_openai.ipynb` and `basquetrivia_anthropic.ipynb` jupyter notebooks in the `analysis` directory. These notebooks will generate the tables of the paper.
+To analyze the results, run the `bertaqa_openai.ipynb` and `bertaqa_anthropic.ipynb` jupyter notebooks in the `analysis` directory. These notebooks will generate the tables of the paper.
 
 # Translate-test and Self-translate
 
@@ -72,7 +72,7 @@ We use the HuggingFace Transformers to translate the datasets. Translation scrip
 For example, to translate the EusTrivia dataset to English using NLLB-200-3.3B, run:
 
 ```bash
-sbatch translate_basquetrivia_nllb.slurm
+sbatch translate_bertaqa_nllb.slurm
 ```
 
 ## Self-translate
@@ -80,7 +80,7 @@ sbatch translate_basquetrivia_nllb.slurm
 For example, to self-translate the EusTrivia dataset using Latxa v1.1 7b, run:
 
 ```bash
-sbatch self_translate_basquetrivia_latxa-7b-v1.1.slurm
+sbatch self_translate_bertaqa_latxa-7b-v1.1.slurm
 ```
 
 # Citation

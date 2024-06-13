@@ -1,19 +1,19 @@
 {
   "results": {
-    "basquetrivia_en_mt_latxa-13b-v1.1": {
+    "bertaqa_en_mt_latxa-13b-v1.1": {
       "acc,none": 0.5874684608915055,
       "acc_stderr,none": 0.007139135022129809,
-      "alias": "basquetrivia_en_mt_latxa-13b-v1.1"
+      "alias": "bertaqa_en_mt_latxa-13b-v1.1"
     }
   },
   "group_subtasks": {
-    "basquetrivia_en_mt_latxa-13b-v1.1": []
+    "bertaqa_en_mt_latxa-13b-v1.1": []
   },
   "configs": {
-    "basquetrivia_en_mt_latxa-13b-v1.1": {
-      "task": "basquetrivia_en_mt_latxa-13b-v1.1",
-      "group": "basquetrivia",
-      "dataset_path": "HiTZ/BasqueTrivia",
+    "bertaqa_en_mt_latxa-13b-v1.1": {
+      "task": "bertaqa_en_mt_latxa-13b-v1.1",
+      "group": "bertaqa",
+      "dataset_path": "HiTZ/BertaQA",
       "dataset_name": "en_mt_latxa-13b-v1.1",
       "test_split": "test",
       "fewshot_split": "test",
@@ -44,10 +44,10 @@
     }
   },
   "versions": {
-    "basquetrivia_en_mt_latxa-13b-v1.1": 0.0
+    "bertaqa_en_mt_latxa-13b-v1.1": 0.0
   },
   "n-shot": {
-    "basquetrivia_en_mt_latxa-13b-v1.1": 5
+    "bertaqa_en_mt_latxa-13b-v1.1": 5
   },
   "config": {
     "model": "hf",

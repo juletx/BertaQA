@@ -20,8 +20,8 @@ folder="gemma"
 
 # select tasks
 tasks_selected=(
-    "basquetrivia_eu"
-    "basquetrivia_en"
+    "bertaqa_eu"
+    "bertaqa_en"
 )
 
 num_fewshot=5

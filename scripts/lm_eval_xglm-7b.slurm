@@ -23,9 +23,9 @@ folder="xglm"
 
 # select tasks
 tasks_selected=(
-    "basquetrivia_eu"
-    "basquetrivia_en"
-    #"basquetrivia_en_mt"
+    "bertaqa_eu"
+    "bertaqa_en"
+    #"bertaqa_en_mt"
 )
 
 num_fewshot=5

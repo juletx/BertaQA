@@ -1,19 +1,19 @@
 {
   "results": {
-    "basquetrivia_en_mt_madlad": {
+    "bertaqa_en_mt_madlad": {
       "acc,none": 0.5761143818334735,
       "acc_stderr,none": 0.007166439497704671,
-      "alias": "basquetrivia_en_mt_madlad"
+      "alias": "bertaqa_en_mt_madlad"
     }
   },
   "group_subtasks": {
-    "basquetrivia_en_mt_madlad": []
+    "bertaqa_en_mt_madlad": []
   },
   "configs": {
-    "basquetrivia_en_mt_madlad": {
-      "task": "basquetrivia_en_mt_madlad",
-      "group": "basquetrivia",
-      "dataset_path": "HiTZ/BasqueTrivia",
+    "bertaqa_en_mt_madlad": {
+      "task": "bertaqa_en_mt_madlad",
+      "group": "bertaqa",
+      "dataset_path": "HiTZ/BertaQA",
       "dataset_name": "en_mt_madlad",
       "test_split": "test",
       "fewshot_split": "test",
@@ -44,10 +44,10 @@
     }
   },
   "versions": {
-    "basquetrivia_en_mt_madlad": 0.0
+    "bertaqa_en_mt_madlad": 0.0
   },
   "n-shot": {
-    "basquetrivia_en_mt_madlad": 5
+    "bertaqa_en_mt_madlad": 5
   },
   "config": {
     "model": "hf",

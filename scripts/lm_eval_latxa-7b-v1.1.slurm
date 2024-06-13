@@ -19,14 +19,14 @@ folder="latxa"
 
 # select tasks
 tasks_selected=(
-    #"basquetrivia_eu"
-    #"basquetrivia_en"
-    #"basquetrivia_en_mt_nllb"
-    #"basquetrivia_en_mt_madlad"
-    #"basquetrivia_en_mt_hitz"
-    #"basquetrivia_en_mt_itzuli"
-    #"basquetrivia_en_mt_latxa-7b-v1.1"
-    "basquetrivia_en_mt_latxa-13b-v1.1"
+    #"bertaqa_eu"
+    #"bertaqa_en"
+    #"bertaqa_en_mt_nllb"
+    #"bertaqa_en_mt_madlad"
+    #"bertaqa_en_mt_hitz"
+    #"bertaqa_en_mt_itzuli"
+    #"bertaqa_en_mt_latxa-7b-v1.1"
+    "bertaqa_en_mt_latxa-13b-v1.1"
 )
 
 

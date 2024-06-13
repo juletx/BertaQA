@@ -19,13 +19,13 @@ folder="llama-2"
 
 # select tasks
 tasks_selected=(
-    #"basquetrivia_eu"
-    #"basquetrivia_en"
-    #"basquetrivia_en_mt_nllb"
-    #"basquetrivia_en_mt_madlad"
-    #"basquetrivia_en_mt_hitz"
-    #"basquetrivia_en_mt_itzuli"
-    "basquetrivia_en_mt_llama-2-70b"
+    #"bertaqa_eu"
+    #"bertaqa_en"
+    #"bertaqa_en_mt_nllb"
+    #"bertaqa_en_mt_madlad"
+    #"bertaqa_en_mt_hitz"
+    #"bertaqa_en_mt_itzuli"
+    "bertaqa_en_mt_llama-2-70b"
 )
 
 num_fewshot=5
