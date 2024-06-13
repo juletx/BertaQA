@@ -63,7 +63,7 @@ To analyze the results, run the `bertaqa_openai.ipynb` and `bertaqa_anthropic.ip
 We use the HuggingFace Transformers to translate the datasets. Translation scripts are in the `translate` directory. There is a folder for each model with the translation scripts that were used to generate the results in the paper. The resulting translated datasets are available in HuggingFace: https://huggingface.co/HiTZ/BertaQA.
 
 - The script `dataset.py` contains the dataset classes.
-- The script `dataset_configs.py` contains the configuration for each dataset.
+- The script `dataset_configs.py` contains the dataset configuration.
 - We use the `translate_dataset_nllb.py` script to translate the datasets with NLLB. This script uses the `translate.py` script to translate each field of the dataset.
 - The `translate_dataset_few_shot.py` script is used to translate the datasets with XGLM. This script uses the `translate_few_shot.py` script to translate each field of the dataset.
 
@@ -80,7 +80,7 @@ sbatch translate_bertaqa_nllb.slurm
 For example, to self-translate the EusTrivia dataset using Latxa v1.1 7b, run:
 
 ```bash
-sbatch self_translate_bertaqa_latxa-7b-v1.1.slurm
+sbatch translate_bertaqa_latxa-7b-v1.1.slurm
 ```
 
 # Citation
