@@ -1,0 +1,51 @@
+id,category,difficulty,question,candidate0,candidate1,candidate2,answer
+1,Zinema eta ikuskizunak,1,"What's the name of the film based on Bernardo Atxaga's novel ""Obabakoak""?","""Obabakoak""","""Obaba""","""Obabako istorioak""",1
+2,Geografia eta Historia,1,Where's Atxondo?,In Biscay,In Gipuzkoa,In Navarre,0
+5,Zinema eta ikuskizunak,3,"How long, more or less, did the episodes of ""Bertan zoro"" last?",90 minutes,60 minutes,30 minutes,2
+7,Zinema eta ikuskizunak,2,"Which film was a box office success for the ""Frontera Films Irun"" production company?","""Alquezar""","""Ama Lur""","""Pelotari""",1
+8,Kirola eta aisialdia,1,Where was Julian Retegi born?,Areso,Eratsun,Eraso,1
+15,Gizartea eta ohiturak,3,Which of the following is a Basque Government institution?,IKA,AEK,HABE,2
+17,Gizartea eta ohiturak,1,How long does the Bilbao Aste Nagusia or Great Week last?,12 days,9 days,7 days,1
+18,Geografia eta Historia,1,What or who was Banu Qasi?,A former king of Navarre,A powerful Muslim tribe,An important historian from the Northern Basque Country,1
+21,Kultura eta artea,3,Who built the Gaztelu Berria or Château-Neuf in Bayonne?,The English,The French,The Spanish,0
+23,Gizartea eta ohiturak,1,"Which Basque city is known as ""Botxo""?",Bilbao,Vitoria-Gasteiz,Donibane Garazi/St-Jean-Pied-de-Port,0
+28,Euskara eta literatura,3,What is the line of business of the enterprise Eleka?,Language engineering,Bertsolarism,Research to find the origin of Basque,0
+33,Zinema eta ikuskizunak,2,Which of these is not a silent Basque film?,"""El mayorazgo de Basterretxe""","""La madre muerta""","""Los apuros de Octavio""",1
+35,Kultura eta artea,3,When did the Goenkale soap opera start?,In 1994,In 1993,In 1995,0
+38,Kirola eta aisialdia,3,How many metres long does the square have to be in a txinga weight carrying contest?,26,28,25,1
+39,Zientzia eta teknologia,3,The Deba railway was a branch of which main line?,The San Sebastian-Zumarraga line,The Durango-Zumarraga line,The Eibar-Zumarraga line,1
+40,Kirola eta aisialdia,1,Where's Mount Mendaur located?,In Biscay,In Labourd,In Navarre,2
+44,Euskara eta literatura,2,In what year did the Euskaltzaindia (Royal Academy of the Basque Language) establish the foundations for Standard Basque?,In 1968,In 1967,In 1965,0
+45,Zientzia eta teknologia,3,Which of these mines was exploited by the Romans?,The mines of Miñagañe,The mines of Aralar,The mines of Arditurri,2
+51,Euskara eta literatura,1,Which of the following authors creates children's literature?,Joxe Ignazio Gerriko,Agustin Kardaberaz,Iñaki Zubeldia,2
+52,Zientzia eta teknologia,3,What was the narrow-gauge railway connecting the municipalities of Zumarraga and Zumaia called?,The Urola Train,The Zumarraga train,The Gipuzkoa train,0
+53,Zinema eta ikuskizunak,2,"What kind of film is Javier Rebollo's ""Agur Txomin""?",A short film,A feature film,A documentary,0
+55,Gizartea eta ohiturak,1,Who's Olentzero's partner?,Mari Domingi,Anbotoko Mari,Gabonetako Dama,0
+69,Gizartea eta ohiturak,3,Who is responsible for protecting and guaranteeing the rights of the citizens in Basque Autonomous Community?,The Chief Security Officer,The Ararteko,The Ombudsman,1
+77,Kirola eta aisialdia,2,Where can dovecotes be found?,In Leitza,In Etxalar,In Goizueta,1
+80,Euskara eta literatura,2,What's the bertsolarism show broadcast by the ETB (Basque Public TV) called?,"""Hitza jolas""","""Bertsolandia""","""Hitzetik hortzera""",2
+83,Gizartea eta ohiturak,1,What is the custom on St. Blas's Day to prevent sore throats throughout the year?,To eat cakes and go to mass,To eat doughnuts,To buy blessed threads,2
+84,Zientzia eta teknologia,3,Where's the Eureka Science Museum?,In the Biscay Science and Technology Park,In the Álava Technology Park,In the Gipuzkoa Science and Technology Park,2
+87,Zinema eta ikuskizunak,3,What's the Antzerkiola Imaginarioa group called in Spanish?,Academia de Teatro Imaginario,Fa_x0081_brica de Teatro Imaginario,Escuela de Teatro Imaginario,1
+89,Zientzia eta teknologia,1,What kind of tree is the Gernikako Arbola or Tree of Gernika?,A pine,A holm oak,An oak,2
+90,Kultura eta artea,1,"Who created the ""Haizearen orrazia"" or ""The Comb of the Wind"" sculpture?",Eduardo Chillida,Jorge Oteiza,Agustin Ibarrola,0
+92,Gizartea eta ohiturak,2,When is the Day of the Basque Language celebrated?,On 3 December,On 14 February,On May 19,0
+93,Euskara eta literatura,2,Who brought Basque lyric poetry to the highest level?,Magunagoitia and Urbizu,Perurena and Urkia,Lizardi and Lauaxeta,2
+99,Zientzia eta teknologia,1,What is the most important shipping port in Gipuzkoa?,The Port of Pasaia,The Port of Donostia / San Sebastian,The Port of Getaria,0
+102,Geografia eta Historia,1,When did Judge Pierre de Lancre try the witches of Zugarramurdi?,At the beginning of the 18th century,At the end of the 17th century,At the beginning of the 17th century,2
+104,Gizartea eta ohiturak,1,What's the name of the mascot of the Baskonia basketball team?,Aker,Saskitxo,Txuri,0
+105,Kultura eta artea,2,Where's the Arriaga Theatre?,In Pamplona / Iruña,In Bilbao,In Donostia / San Sebastian,1
+107,Euskara eta literatura,2,Which of these was not a monk?,Bitoriano Gandiaga,Jautarkol,Txillardegi,2
+108,Kultura eta artea,1,"Where's the ""Haizearen orrazia"" or ""The Comb of the Wind"" sculpture?",In Donostia / San Sebastian,In Getaria,In Zarautz,0
+114,Kultura eta artea,2,Where's the Pietà sculpture located?,In Bilbao,In Donostia / San Sebastian,In Bayonne,1
+115,Euskara eta literatura,2,In what field has Ibon Sarasola been prominent?,In comparative linguistics,In lexicography,In translation,1
+117,Kirola eta aisialdia,1,What can't be used in handball?,Legs,Hands,Arms,0
+118,Gizartea eta ohiturak,2,Which of these is a farm tool?,Hoe,Knife,Hammer,0
+123,Zientzia eta teknologia,2,When did the lake of Pitillas join the Ramsar Convention?,In 1996,In 1993,In 2007,0
+125,Zientzia eta teknologia,2,"Traditionally, what was the main heavy industry in the Basque Country?",The iron and steel industry,The oil industry,The chemical industry,0
+130,Zientzia eta teknologia,2,How many companies are there in the Álava Technology Park?,22,56,102,2
+131,Geografia eta Historia,1,When was the dictatorship of General Franco established?,In 1939,In 1942,In 1945,0
+132,Gizartea eta ohiturak,1,What does the Tree of Gernika represent?,The Importance of Basque Culture and Traditions,The traditional freedom of the Basques and the Basque charters,The official nature and value of the Basque language,1
+133,Euskara eta literatura,3,What is the name of the organization that aims to develop Basque culture in the French Basque Country?,The Euskal Kultur Erakundea (EKE),The EHE,Sehaska,0
+138,Geografia eta Historia,3,What did Manuel Godoy sign in 1807?,The Treaty of Aranjuez,The Treaty of Vergara,The Treaty of Fontainebleau,2
+140,Zientzia eta teknologia,3,"Which of these is not among the towns that form the ""heart of the arms industry""?",Elgoibar,Urretxu,Soraluze,1
