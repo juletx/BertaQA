@@ -1,0 +1,51 @@
+id,category,difficulty,question,candidate0,candidate1,candidate2,answer
+16,Euskara eta literatura,1,"What does the ""Karmel"" magazine specialize in?",Bertsolarism,Basque culture in the past and the present,The life of the Carmelites,1
+27,Geografia eta Historia,3,Which of these towns does not have a common boundary with Elorrio?,Zaldibar,Bergara,Matiena,2
+42,Geografia eta Historia,3,Which of these districts is not in the Pettarra area of Soule?,Etxarri,Garrüze,Sarricotapea,1
+46,Kirola eta aisialdia,2,What's Aritz Aranburu's birthplace?,Zarautz,Orio,Getaria,2
+57,Euskara eta literatura,2,Which Basque dialect is spoken in Eibar?,The Lower Deba dialect,The Central dialect,The Western dialect,2
+73,Euskara eta literatura,2,Which of these three was the Head of a Department in the Chartered Provincial Council of Gipuzkoa?,Tere Irastortza,Joan Mari Irigoien,Xabier Lete,2
+86,Zinema eta ikuskizunak,2,"The stories of how many young people is the ""Hasiberriak"" TV show about?",Ten,Seven,Five,0
+96,Geografia eta Historia,1,Which is the longest river that flows into the sea in the Basque Country?,The Nervion,The Adour,The Ebro,1
+98,Geografia eta Historia,2,Which of these is the least populated area?,The canton ofMaule/Mauleón,The canton of Donapaleu/Saint-Palais,The canton of Atharratze/Tardets,1
+136,Zientzia eta teknologia,2,How many echidna species are there?,8,5,3,1
+154,Euskara eta literatura,1,What is Ricardo Arregi Diaz de Heredia mostly involved in?,Journalism,Adventure stories,Poetry,2
+159,Geografia eta Historia,3,"What year was ""La Vizcaya"" factory set up?",In 1882,In 1884,In 1886,0
+163,Geografia eta Historia,1,What century does the oldest Basque text we know written on paper belong to?,The 15th century,The 12th century,The 10th century,2
+185,Musika eta dantza,1,Where was the great dance master Iñaki Irigoien from?,From Bilbao,From Donostia / San Sebastian,From Vitoria-Gasteiz,0
+196,Geografia eta Historia,3,Which king of Navarre died in 882?,Fortun Gartzia,Eneko Aritza,Gartzia Eneko,2
+202,Zinema eta ikuskizunak,2,"Which band wrote the opening song of the ""Pilotari"" TV series?",Gari,Sugan,Ken Zazpi,1
+215,Euskara eta literatura,2,Which of these subjects was not addressed at the Basque Floral Games?,Dance,Rural sports,Basque poetry,1
+230,Kirola eta aisialdia,3,When was the Leurtza reservoir built?,In 1920,In 1925,In 1921,0
+240,Zientzia eta teknologia,2,Where's the Basque Museum of Medical History?,In Bilbao,In Leioa,In Barakaldo,1
+252,Musika eta dantza,2,"Where does the ""Axuri Beltza"" dance come from?",From the Biscayan town of Aulestia,From the Gipuzkoan town of Errezil,From the Navarrese town of Jaurrieta,2
+274,Zinema eta ikuskizunak,3,"When is the ""Teknopolis"" programme broadcast on ETB1 (Basque Public TV)?",From Monday to Thursday at 18:00,On Saturdays at 15:00,On Fridays and Saturdays at 11:00,1
+299,Zientzia eta teknologia,2,What is the other name of the first blast furnace of Altos Hornos de Vizcaya?,The Miren Agote furnace,The Maria Angeles furnace,The Santa Ana furnace,1
+315,Musika eta dantza,3,How many dance championships are held in the Northern Basque Country a year?,None,Three,Five,0
+335,Musika eta dantza,2,"Where does the ""Trapatan"" dance take place today?",In Etxarri Aranatz,In Ituren,In Doneztebe/Santesteban,2
+348,Zinema eta ikuskizunak,2,"How many Basque voices took part in the show ""Sortuko dira besteak""?",Six,Eight,Four,0
+368,Kirola eta aisialdia,3,"Against whom did the ""aizkolari"" or woodchopper Joxe Mari Olasagasti first compete?",Against Floren Nazabal,Against Donato Larretxea,Against Jose Etxebeste,2
+400,Musika eta dantza,2,"Whose song is ""Freaky Fiesta""?",The Skalariak group's,Betagarri's,Kortatu's,1
+401,Zinema eta ikuskizunak,2,"Who is the protagonist in Borja Cobeaga's short film ""The First Time""?",Txema Blasco,Marivi Bilbao,Barbara Goenaga,1
+419,Zinema eta ikuskizunak,1,"In the show ""Vaya Semanita"" where is the character El Jonan from?",From Otxarkoaga,From Zorroza,From Barakaldo,2
+423,Musika eta dantza,3,"Where exactly is the Biscayan group ""Izenik ez"" from?",From Romo,Fron Abadiño,From Ugao-Miraballes,0
+442,Zinema eta ikuskizunak,1,"Which festivity in the Basque Country appears in the film ""Day & Night""?",The Aste Nagusia or Great Week of Bilbao,The Tamborrada of Donostia / San Sebastian,The San Fermín festival of Pamplona / Iruña,2
+445,Musika eta dantza,3,Who currently directs the Alurr group in Ibarra?,Unax Sarriegi,Aiert Beobide,Edu Muruamendiaraz,1
+465,Kirola eta aisialdia,2,Where's the Onena leisure association from?,From Irun,From Ordizia,From Donostia / San Sebastian,2
+488,Gizartea eta ohiturak,3,Where is the oldest church in Biscay?,In Lekeitio,In Durango,In Bilbao,1
+500,Musika eta dantza,2,Where's the Pi LT band from?,From the Mungia area,From Amorebieta-Etxano,From Bermeo,0
+501,Zientzia eta teknologia,2,When was Pamplona / Iruña General Hospital founded?,In 1555,In 1545,In 1554,1
+510,Kirola eta aisialdia,2,When is Navarre Day celebrated?,The first Sunday in May,The last Sunday in April,The last Saturday in April,1
+537,Kultura eta artea,1,How are Sebastian and Joxe Lizaso related?,They are brothers,They are cousins,They are father and son,2
+548,Musika eta dantza,2,Where's the San Fermín dance company from?,From Zizur,From Tafalla,From Tudela,0
+550,Zinema eta ikuskizunak,3,Where was the Basque screenwriter and director Pello Varela born?,In Amorebieta-Etxano,In Vitoria-Gasteiz,In Portugalete,1
+554,Euskara eta literatura,2,How often is the Jakin magazine published?,Once a month,From time to time,Once a year,0
+569,Euskara eta literatura,3,When did the translation and interpretation degree course start at the University of the Basque Country (UPV/EHU)?,In the 1995-1996 academic year,In the 1990-1991 academic year,In the 2000-2001 academic year,2
+598,Zientzia eta teknologia,3,What's the only amphibian on Mount Urgull?,The common frog,The salamander,The common toad,1
+604,Geografia eta Historia,1,Where's the Gorbeialdea?,In Biscay,In Álava and Biscay,In Álava,2
+605,Musika eta dantza,1,Where's the Getaria dance company from?,From Labourd,From Álava,From Gipuzkoa,0
+646,Kirola eta aisialdia,3,"In 2010, which women's team won the Gipuzkoa trainera rowing championship?",San Juan,Getaria-Tolosa,Zumaia,2
+682,Gizartea eta ohiturak,2,Which of the following is not the function of the chartered councils?,Approval of the chartered regulations,Promotion of cultural activities,Tax collection,0
+683,Euskara eta literatura,3,What was the first novel in Basque to be published in the Southern Basque Country after the War?,"""Hiltzaileak""","""Alos-Torrea""","""Leturiaren egunkari ezkutua""",1
+709,Kirola eta aisialdia,3,Where is the Xaguxar leisure group from?,From Astigarraga,From Hernani,From Ordizia,0
+718,Musika eta dantza,3,Who was the first chairman of the Euskal Dantzarien Biltzarra (Association of Basque Dancers)?,Jesus Maria Arozamena,Jose Antonio Legarra,Juan Jose Garaizabal,0
