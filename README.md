@@ -86,12 +86,15 @@ sbatch translate_bertaqa_latxa-7b-v1.1.slurm
 # Citation
 
 ```bibtex
-@misc{etxaniz2024bertaqa,
-      title={BertaQA: How Much Do Language Models Know About Local Culture?}, 
-      author={Julen Etxaniz and Gorka Azkune and Aitor Soroa and Oier Lopez de Lacalle and Mikel Artetxe},
-      year={2024},
-      eprint={2406.07302},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{NEURIPS2024_3bb42f6b,
+author = {Etxaniz, Julen and Azkune, Gorka and Soroa, Aitor and de Lacalle, Oier Lopez and Artetxe, Mikel},
+booktitle = {Advances in Neural Information Processing Systems},
+editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+pages = {34077--34097},
+publisher = {Curran Associates, Inc.},
+title = {BertaQA: How Much Do Language Models Know About Local Culture?},
+url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/3bb42f6bb1b1ab6809afd6c90865b087-Paper-Datasets_and_Benchmarks_Track.pdf},
+volume = {37},
+year = {2024}
 }
 ```
